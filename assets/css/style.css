@@ -72,7 +72,7 @@
 :root{
  --color-v: #0ac256;
  --color-v2: #087ffc;
- --color-v3: #fff;
+ --color-v3: #13292e;
  --color-v4: #4e9e7d;
 }
 html,
@@ -224,7 +224,7 @@ ul {
 }
 
 a:hover {
-  color: #a60000;
+  color: var(--color-v);
 }
 
 /*************************
@@ -1793,7 +1793,7 @@ textarea:focus {
 }
 
 .logo {
-  margin-top: 31px;
+  margin-top: 10px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .logo {
@@ -2845,7 +2845,7 @@ textarea:focus {
 }
 
 .choose-bg-yellow {
-  background-color: #fdc735;
+  background-color: #fdab2f;
 }
 
 .choose-bg-blue {
@@ -2860,6 +2860,14 @@ textarea:focus {
   margin-top: -102px;
   z-index: 9;
   position: relative;
+}
+
+.choose-bg-light-pink{
+  background-color: #bc78db;
+}
+
+.choose-bg-light-red{
+  background-color: #e66464;
 }
 @media only screen and (max-width: 992px){
   .choose-negative-mrg{
@@ -5196,7 +5204,7 @@ textarea:focus {
 
 /*--------- 12. footer area ---------*/
 .footer-top.default-overlay:before {
-  background-color: #003502;
+  background-color: var(--color-v3);
   opacity: 0.89;
 }
 
@@ -5222,7 +5230,7 @@ textarea:focus {
   content: "";
   height: 2px;
   width: 50px;
-  background-color: #e10606;
+  background-color: var(--color-v);
 }
 .footer-widget .footer-about p {
   color: #fff;
@@ -5262,7 +5270,7 @@ textarea:focus {
   display: block;
 }
 .footer-widget .footer-list ul li a:hover {
-  color: #e10606;
+  color: var(--color-v);
 }
 .footer-widget .footer-gallery ul {
   display: -webkit-box;
@@ -5308,7 +5316,7 @@ textarea:focus {
   width: auto;
   font-weight: bold;
   text-transform: uppercase;
-  color: #e10606;
+  color: var(--color-v);
   height: auto;
   padding: 9px 40px;
   margin-top: 20px;
@@ -5316,7 +5324,7 @@ textarea:focus {
   letter-spacing: 0.5px;
 }
 .footer-widget .subscribe-style .subscribe-form form .clear input:hover {
-  background-color: #e10606;
+  background-color: var(--color-v);
   color: #fff;
 }
 
@@ -5348,7 +5356,7 @@ textarea:focus {
 }
 
 .footer-bottom {
-  background-color: #e10606;
+  background-color: var(--color-v);
 }
 
 .copyright p {
