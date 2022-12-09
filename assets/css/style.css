@@ -1534,7 +1534,7 @@ textarea:focus {
 }
 
 .mean-container a.meanmenu-reveal {
-  top: -26px;
+  top: -50px;
 }
 
 #mobile-menu-active {
@@ -1909,7 +1909,7 @@ textarea:focus {
   color: #333;
   text-transform: uppercase;
   display: inline-block;
-  line-height: 87px;
+  line-height: 50px;
 }
 .main-menu nav ul li a i {
   color: var(--color-v);
@@ -2885,16 +2885,19 @@ textarea:focus {
 @media only screen and (min-width: 1366px) and (max-width: 1600px) {
   .single-choose-us {
     padding: 50px 15px 46px;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1365px) {
   .single-choose-us {
     padding: 40px 15px 36px;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .single-choose-us {
     padding: 30px 10px 26px;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
