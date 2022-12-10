@@ -1,3 +1,7 @@
 https://ww2.institutoaucara.edu.pe/wp-login.php
 admin
 123456
+
+Listas categorias
+=============
+https://ww2.institutoaucara.edu.pe/wp-json/wp/v2/categories
