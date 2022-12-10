@@ -1,0 +1,23 @@
+.banner {
+    width: 100%;
+    height: 540px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotateY(180deg);
+    filter: contrast(1);
+}
+
+.banner__description {
+    position: absolute;
+    top: 100px;
+    left: 70px;
+    width: 510px;
+    font-size: 30pt;
+    color: #fff;
+}

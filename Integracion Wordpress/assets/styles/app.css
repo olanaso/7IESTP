@@ -1,0 +1,125 @@
+/*
+
+Colores y Tipografias
+#022986
+#009bd7
+#428dff
+#74697f
+
+Tamaño fuente
+60pt
+40pt
+20pt
+15pt
+
+*/
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins-Regular.otf');
+    src: url('../fonts/Poppins-Regular.otf') format('OpenType');
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('../fonts/Poppins-Bold.otf');
+    src: url('../fonts/Poppins-Bold.otf') format('OpenType');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins';
+    color: #74697f;
+}
+
+img {
+    width: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #022986;
+    transition: all .3s;
+}
+
+a:hover {
+    filter: brightness(130%);
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    min-height: 35px;
+    background: transparent;
+    transition: all .3s;
+}
+
+.button {
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    min-height: 35px;
+    background: transparent;
+    transition: all .3s;
+}
+
+.button:hover {
+    filter: brightness(120%);
+}
+
+button:hover {
+    filter: brightness(120%);
+}
+
+input {
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    min-height: 35px;
+}
+
+strong {
+    font-family: 'poppins-bold';
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1360px) {
+    .container {
+        width: 992px;
+    }
+}
+  
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 768px;
+    }
+}
+  
+@media screen and (max-width: 992px) {
+    body {
+        overflow: auto;
+    }
+    .container {
+        width: 768px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 768px;
+    }
+}

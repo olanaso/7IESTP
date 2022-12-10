@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/styles/app.css">
+    <link rel="stylesheet" href="assets/styles/header.css">
+    <link rel="stylesheet" href="assets/styles/footer.css">
+    <link rel="stylesheet" href="assets/styles/banner.css">
+    <link rel="stylesheet" href="assets/styles/cards.css">
+</head>
+<body>
+    <header class="header">
+        <a class="header__logo" href="/"><img src="assets/icons/LOGO AEO@3x.png" alt="Logotipo AEO" /></a>
+        <nav class="header-nav">
+            <a class="header-nav__link" href="/"><li>INICIO</li></a>
+            <a class="header-nav__link" href="https://www.lacteosapvc.com/quienes-somos/"><li>QUIENES SOMOS</li></a>
+            <a class="header-nav__link" href="https://www.lacteosapvc.com/category/productos/"><li>NUESTROS PRODUCTOS</li></a>
+            <a class="header-nav__link" href="https://www.lacteosapvc.com/category/noticias"><li>NOVEDADES</li></a>
+            <a class="header-nav__link" href="https://www.lacteosapvc.com/contactenos"><li>CONTACTENOS</li></a>
+        </nav>
+        <button class="header__button" id="comprar1">COMPRA Y CONSULTA AQUÍ</button>
+    </header>
+
+    <section class="banner">
+        <img class="banner__image" src="assets/images/08.jpg" alt="Imagen banner">
+        <p class="banner__description">
+            SOMOS <strong>PRODUCTORES</strong> DE LOS MEJORES 
+            <strong>LÁCTEOS</strong> DEL
+            <strong>PERÚ</strong>
+        </p>
+    </section>
+
+    <section class="container search">
+        <div class="search-content">
+            <p class="search-content__label">
+                <span>QUIERO</span>
+                <span>LOS PRODUCTOS</span>
+            </p>
+            <input class="search-content__input" type="text" placeholder="Buscar producto" id="search" />
+            <a id="button-search" class="search-content__button">Buscar</a>
+        </div>
+    </section>
+
+    <section class="container products">
+        <div class="products-description">
+            <h3>
+                <span>Lorem ipsum</span>
+                <strong>PRODUCTOS</strong>
+            </h3>
+            <p>
+                Consiste en el mejoramiento de la capacidad de producción y comercialización en la cadena productiva de lácteos, son alimentos de alto consumo regional, cabe 
+                decir que las familias la consumen como complemento en los desayunos, su aceptación es a nivel nacional y mundial.
+            </p>
+            <div class="products-description__buttons">
+                <span><span id="id-card-product">1</span>/3</span>
+                <button id="click-prev"><img src="assets/icons/3x/Recurso 9@3x.png" alt="Flecha izquierda"></button>
+                <button id="click-next"><img src="assets/icons/3x/Recurso 8@3x.png" alt="Flecha derecha"></button>
+            </div>
+        </div>
+        <div class="cards-products">
+            <div class="card-products card-products--active" data-id="1">
+                <img src="assets/icons/3x/Recurso 3@3x.png" alt="Icon queso" />
+                <h6>QUESO</h6>
+                <p>
+                    Producto derivado de la leche “produce es el queso molde y en gran medida el queso sincha, el cual es una forma tradicional de presentación tradicional ayacuchano"
+                </p>
+            </div>
+            <div class="card-products" data-id="2">
+                <img src="assets/icons/3x/Recurso 4@3x.png" alt="Icon vaca" />
+                <h6>LECHE</h6>
+                <p>
+                    Leche cruda entera, es el producto integro no adulterado del ordeño higiénico, regular y completo de vacas sanas y bien alimentadas y exento de color, olor y sabor
+                </p>
+            </div>
+            <div class="card-products" data-id="3">
+                <img src="assets/icons/3x/Recurso 2@3x.png" alt="Icon leche" />
+                <h6>YOGURT</h6>
+                <p>
+                    El yogur es un producto lácteo obtenido mediante la fermentación de la leche​. En la actualidad, el yogur está ampliamente reconocido como un alimento muy saludable.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="product">
+        <img class="product__back" src="assets/images/07.jpg" alt="Fondo vacas">
+        <h4><strong>PRODUCTOS</strong></h4>
+        <div class="container cards-product" id="container-products">
+        </div>
+    </section>
+
+    <section class="news">
+        <h4><strong>ULTIMAS NOTICIAS</strong></h4>
+        <div class="container cards-new" id="container-news">
+        </div>
+    </section>
+
+    <img class="fondo-separate" src="assets/images/05.jpg" alt="Fondo">
+
+    <section class="clients">
+        <div class="clients__description">
+            <h3>
+                <small>NUESTROS</small>
+                <strong>CLIENTES</strong>
+            </h3>
+            <p>
+                Proveemos y trabajamos directamente con grandes distribuidoras y empresas garantizadas como: Plaza Vea, Tottus, Metro, Vivanda y muchas más.
+            </p>
+        </div>
+        <div class="clients__block"></div>
+        <img class="clients__image-2" src="assets/images/04.jpg" alt="Imagen de botellas de leche">
+        <img class="clients__image-1" src="assets/images/01.jpg" alt="Imagen de botella de leche sirviendo">
+    </section>
+
+    <footer>
+        <section class="prefooter">
+            <img class="prefooter__image" src="assets/images/09.jpg" alt="Imagen de vacas">
+        </section>
+        <section class="container footer-abs">
+            <div class="footer-abs-content">
+                <h3 class="footer-abs-content__description">
+                    <small>NUESTROS</small>
+                    <strong>CLIENTES</strong>
+                </h3>
+                <a target="_blank" href="https://www.plazavea.com.pe/"><img src="assets/icons/plaza-vea.svg" alt="Logo Plaza Vea"></a>
+                <a target="_blank" href="https://www.tottus.com.pe/"><img src="assets/icons/tottus.jpg" alt="Logo Tottus"></a>
+                <a target="_blank" href="https://www.metro.pe/"><img src="assets/icons/metro.jpg" alt="Logo Metro"></a>
+                <a target="_blank" href="https://www.vivanda.com.pe/"><img src="assets/icons/Vivanda.svg" alt="Logo Vivanda"></a>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="footer__description">
+                <img src="assets/icons/LOGO AEO@3x.png" alt="Logotipo AEO" />
+                <p>
+                    La “Asociación de Productores del Valle Ccorimayo Ccechua Acccobamba” con más de 10 años en el mercado desde sus inicios y constituida recientemente hace 4 años, se dedica a la crianza de vacunos, producción de leche y derivados lácteos, caracterizado por su constante desarrollo productivo y empresarial. Actualmente cuenta con 26 socios.
+                </p>
+            </div>
+            <nav class="footer-nav">
+                <a class="footer-nav__link" href="/"><li>INICIO</li></a>
+                <a class="footer-nav__link" href="https://www.lacteosapvc.com/quienes-somos/"><li>QUIENES SOMOS</li></a>
+                <a class="footer-nav__link" href="https://www.lacteosapvc.com/category/noticias"><li>NOVEDADES</li></a>
+                <a class="footer-nav__link" href="https://www.lacteosapvc.com/contactenos"><li>CONTACTENOS</li></a>
+            </nav>
+            <button class="header__button" id="comprar2">COMPRA Y CONSULTA AQUÍ</button>
+        </section>
+        <div class="footer-down">
+            © Copyright 2021, Todos los derechos reservados | AEO APVCC.
+        </div>
+    </footer>
+</body>
+<script src="main.js"></script>
+</html>
