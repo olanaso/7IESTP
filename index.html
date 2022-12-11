@@ -11,7 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="https://ww2.institutoaucara.edu.pe/wp-content/uploads/2022/12/Logo-aucara-1.png">
-    
+    <!--=============== BOXICONS ===============-->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+
     <!-- CSS
 	============================================ -->
    
@@ -24,7 +26,7 @@
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Modernizer JS -->
-    <script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>    
 </head>
 
 <body>
@@ -67,13 +69,17 @@
                         <div class="main-menu">
                             <nav>
                                 <ul>
-                                    <li><a href="index.html"> Inicio </a>
-                                        <ul class="submenu">
-                                            <li><a href="index.html">home version 1</a></li>
-                                            <li><a href="index-2.html">home version 2</a></li>
-                                            <li><a href="index-3.html">home version 3</a></li>
-                                        </ul>
+                                    <li><a href="index.html"><i class="bx bx-home"></i></a>
                                     </li>
+                                    <!--
+                                        <li><a href="index.html"> Inicio </a>
+                                            <ul class="submenu">
+                                                <li><a href="index.html">home version 1</a></li>
+                                                <li><a href="index-2.html">home version 2</a></li>
+                                                <li><a href="index-3.html">home version 3</a></li>
+                                            </ul>
+                                        </li>
+                                    -->
                                     <li><a href="#"> Nosotros <i class="fa fa-angle-down"></i> </a>
                                         <ul class="submenu">
                                             <li><a href="#">Reseña Historia</a></li>
@@ -84,7 +90,7 @@
                                             <li><a href="#">Organigrama</a></li>
                                         </ul>
                                     </li>
-                                    <li class="mega-menu-position top-hover"><a href="shop.html"> Programas <i class="fa fa-angle-down"></i> </a>
+                                    <li class="mega-menu-position top-hover"><a href="#"> Programas <i class="fa fa-angle-down"></i> </a>
                                         <ul class="mega-menu">
                                             <li>
                                                 <ul>
@@ -156,6 +162,21 @@
                                 </ul>
                             </nav>
                         </div>
+                        <div class="cart-search-wrap">
+                            <div class="header-search">
+                                <button class="search-toggle">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                                <div class="search-content" style="display: none;">
+                                    <form action="#">
+                                        <input type="text" placeholder="Buscar" id="txt-buscar">
+                                        <button id="send-search">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -224,48 +245,8 @@
 <div class="slider-area">
     <div class="slider-active-2 owl-carousel nav-style-2">
         <div class="single-slider slider-height-3 bg-img pt-170" style="background-image:url(assets/img/slider/instituto-aucara.jpeg);">
-            <!--
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="slider-single-img2 slider-animated-2">
-                                <img class="animated" src="assets/img/slider/single-slide-2.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12 col-sm-6">
-                            <div class="slider-content-3 slider-animated-2 pt-115 ml-55">
-                                <h1 class="animated"><span style="color: red">AUCARÁ</span></h1>
-                                <p class="animated" style="color:white">Instituto de Educación Superior Tecnológico Público </p>
-                                <div class="slider-btn">
-                                    <a class="animated default-btn btn-green-color" href="#">Conoce más</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            -->
         </div>
         <div class="single-slider slider-height-3 bg-img pt-170" style="background-image:url(assets/img/slider/3-Enfermeria-Tecnica-Aucara.jpg);">
-            <!--
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="slider-single-img2 slider-animated-2">
-                                <img class="animated" src="assets/img/slider/single-slide-2.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12 col-sm-6">
-                            <div class="slider-content-3 slider-animated-2 pt-115 ml-55">
-                                <h1 class="animated" style="color:white">TITLE</h1>
-                                <p class="animated" style="color:white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor eiusmod incididunt ut labore et dolore magna aliqua.</p>
-                                <div class="slider-btn">
-                                    <a class="animated default-btn btn-green-color" href="cart.html">ADD TO CART</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            -->
         </div>
     </div>
 </div>
@@ -279,9 +260,6 @@
                     </div>
                     <div class="choose-content">
                         <h3>Admisión</h3>
-                        <!--
-                            <p>magna aliqua. Ut enim ad minim veniam conse ctetur adipisicing elit, sed do exercitation. </p>
-                        -->
                     </div>
                 </a>
             </div>
@@ -315,7 +293,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6 delete-card">
                 <div class="">
                     <div class="choose-img">
                     </div>
@@ -382,7 +360,7 @@
         <div class="course-slider-active nav-style-1 owl-carousel">
             <div class="single-course">
                     <div class="course-img">
-                        <a href="course-details.html"><img class="animated" src="https://ww2.institutoaucara.edu.pe/wp-content/uploads/2022/12/produccion-agropecuaria.jpg" width="293" height="274" alt=""></a>
+                        <a href="#"><img class="animated" src="https://ww2.institutoaucara.edu.pe/wp-content/uploads/2022/12/produccion-agropecuaria.jpg" width="293" height="274" alt=""></a>
                     </div>
                     <div class="course-content">
                         <h4><a href="course-details.html">Producción Agropecuaria</a></h4>
@@ -399,89 +377,12 @@
                                 <span>Duration : 4yrs</span>
                             </div>
                         </div>
-                        <div class="course-btn">
-                            <a class="default-btn" href="#">Aplicar ahora</a>
-                        </div>
+                        <a class="default-btn" href="#">INSCRÍBETE</a>
                     </div>
             </div>
-            <!-- 
-                <div class="single-course">
-                    <div class="course-img">
-                        <a href="course-details.html"><img class="animated" src="assets/img/course/course-2.jpg" alt=""></a>
-                        <span>Curso</span>
-                    </div>
-                    <div class="course-content">
-                        <h4><a href="course-details.html">Producción agropecuaria</a></h4>
-                        <p>magna aliqua. Ut enim ad minim veniam, nisi ut aliquiptempor incid.</p>
-                    </div>
-                    <div class="course-position-content">
-                        <div class="credit-duration-wrap">
-                            <div class="sin-credit-duration">
-                                <i class="fa fa-diamond"></i>
-                                <span>Credits : 125</span>
-                            </div>
-                            <div class="sin-credit-duration">
-                                <i class="fa fa-clock-o"></i>
-                                <span>Duration : 4yrs</span>
-                            </div>
-                        </div>
-                        <div class="course-btn">
-                            <a class="default-btn" href="#">Aplicar ahora</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-course">
-                    <div class="course-img">
-                        <a href="course-details.html"><img class="animated" src="assets/img/course/course-3.jpg" alt=""></a>
-                    </div>
-                    <div class="course-content">
-                        <h4><a href="course-details.html">Educación</a></h4>
-                        <p>magna aliqua. Ut enim ad minim veniam, nisi ut aliquiptempor incid.</p>
-                    </div>
-                    <div class="course-position-content">
-                        <div class="credit-duration-wrap">
-                            <div class="sin-credit-duration">
-                                <i class="fa fa-diamond"></i>
-                                <span>Credits : 125</span>
-                            </div>
-                            <div class="sin-credit-duration">
-                                <i class="fa fa-clock-o"></i>
-                                <span>Duration : 4yrs</span>
-                            </div>
-                        </div>
-                        <div class="course-btn">
-                            <a class="default-btn" href="#">Aplicar ahora</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-course">
-                <div class="course-img">
-                    <a href="course-details.html"><img class="animated" src="assets/img/course/course-2.jpg" alt=""></a>
-                </div>
-                <div class="course-content">
-                    <h4><a href="course-details.html">Apparel Manufacturing</a></h4>
-                    <p>magna aliqua. Ut enim ad minim veniam, nisi ut aliquiptempor incid.</p>
-                </div>
-                <div class="course-position-content">
-                    <div class="credit-duration-wrap">
-                        <div class="sin-credit-duration">
-                            <i class="fa fa-diamond"></i>
-                            <span>Credits : 125</span>
-                        </div>
-                        <div class="sin-credit-duration">
-                            <i class="fa fa-clock-o"></i>
-                            <span>Duration : 4yrs</span>
-                        </div>
-                    </div>
-                    <div class="course-btn">
-                        <a class="default-btn" href="#">Aplicar ahora</a>
-                    </div>
-                </div>
-            </div>
-            -->
             <div class="single-course">
                 <div class="course-img">
-                    <a href="course-details.html"><img class="animated" src="https://www.institutoaucara.edu.pe/wp-content/uploads/2021/07/enfermeria-3.jpg" alt="" width="293" height="274"></a>
+                    <a href="#"><img class="animated" src="https://www.institutoaucara.edu.pe/wp-content/uploads/2021/07/enfermeria-3.jpg" alt="" width="293" height="274"></a>
                 </div>
                 <div class="course-content">
                     <h4><a href="course-details.html">Enfermeria</a></h4>
@@ -498,41 +399,8 @@
                             <span>Duration : 4yrs</span>
                         </div>
                     </div>
-                    <div class="course-btn">
-                        <a class="default-btn" href="#">aplicar ahora</a>
-                    </div>
+                    <a class="default-btn" href="#">INSCRÍBETE</a>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="brand-logo-area pb-50 pt-100">
-    <div class="container">
-        <div class="section-title mb-75">
-            <h2> <span>Nuestros</span>  Convenios</h2>
-            <p></p>
-        </div>
-        <div class="brand-logo-active owl-carousel">
-            <div class="single-brand-logo">
-                <a href="#"><img src="assets/img/brand-logo/1.png" alt=""></a>
-            </div>
-            <div class="single-brand-logo">
-                <a href="#"><img src="assets/img/brand-logo/2.png" alt=""></a>
-            </div>
-            <div class="single-brand-logo">
-                <a href="#"><img src="assets/img/brand-logo/3.png" alt=""></a>
-            </div>
-            <div class="single-brand-logo">
-                <a href="#"><img src="assets/img/brand-logo/4.png" alt=""></a>
-            </div>
-            <div class="single-brand-logo">
-                <a href="#"><img src="assets/img/brand-logo/5.png" alt=""></a>
-            </div>
-            <div class="single-brand-logo">
-                <a href="#"><img src="assets/img/brand-logo/6.png" alt=""></a>
-            </div>
-            <div class="single-brand-logo">
-                <a href="#"><img src="assets/img/brand-logo/2.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -754,214 +622,46 @@
         </div>
     </div>
 </div>
-
-<!--
-    SECTION OUR EVENT
-    <div class="event-area bg-img default-overlay pt-130 pb-130" style="background-image:url(assets/img/bg/bg-3.jpg);">
-        <div class="container">
-            <div class="section-title mb-75">
-                <h2><span>Our</span> Event</h2>
-                <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br>veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip </p>
+<div class="blog-area pt-130 pb-100">
+    <div class="container">
+        <div class="section-title mb-75">
+            <h2>Nuevas <span>Noticias</span></h2>
+        </div>
+        <div class="row" id="container-news">
+        </div>
+    </div>
+</div>
+<div class="brand-logo-area pb-50 pt-100">
+    <div class="container">
+        <div class="section-title mb-75">
+            <h2> <span>Nuestros</span>  Convenios</h2>
+            <p></p>
+        </div>
+        <div class="brand-logo-active owl-carousel">
+            <div class="single-brand-logo">
+                <a href="#"><img src="assets/img/brand-logo/1.png" alt=""></a>
             </div>
-            <div class="event-active owl-carousel nav-style-1">
-                <div class="single-event event-white-bg">
-                    <div class="event-img">
-                        <a href="event-details.html"><img src="assets/img/event/event-1.jpg" alt=""></a>
-                        <div class="event-date-wrap">
-                            <span class="event-date">1st</span>
-                            <span>Dec</span>
-                        </div>
-                    </div>
-                    <div class="event-content">
-                        <h3><a href="event-details.html">Aempor incididunt ut labore ejam.</a></h3>
-                        <p>Pvolupttem accusantium doloremque laudantium, totam erspiciatis unde omnis iste natus error .</p>
-                        <div class="event-meta-wrap">
-                            <div class="event-meta">
-                                <i class="fa fa-location-arrow"></i>
-                                <span>Mascot Plaza ,Uttara</span>
-                            </div>
-                            <div class="event-meta">
-                                <i class="fa fa-clock-o"></i>
-                                <span>11:00 am</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-event event-white-bg">
-                    <div class="event-img">
-                        <a href="event-details.html"><img src="assets/img/event/event-2.jpg" alt=""></a>
-                        <div class="event-date-wrap">
-                            <span class="event-date">10th</span>
-                            <span>Dec</span>
-                        </div>
-                    </div>
-                    <div class="event-content">
-                        <h3><a href="event-details.html">Global Conference on Business.</a></h3>
-                        <p>Pvolupttem accusantium doloremque laudantium, totam erspiciatis unde omnis iste natus error .</p>
-                        <div class="event-meta-wrap">
-                            <div class="event-meta">
-                                <i class="fa fa-location-arrow"></i>
-                                <span>Shubastu ,Dadda</span>
-                            </div>
-                            <div class="event-meta">
-                                <i class="fa fa-clock-o"></i>
-                                <span>08:30 am</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-event event-white-bg">
-                    <div class="event-img">
-                        <a href="event-details.html"><img src="assets/img/event/event-3.jpg" alt=""></a>
-                        <div class="event-date-wrap">
-                            <span class="event-date">1st</span>
-                            <span>Dec</span>
-                        </div>
-                    </div>
-                    <div class="event-content">
-                        <h3><a href="event-details.html">Academic Conference Maui.</a></h3>
-                        <p>Pvolupttem accusantium doloremque laudantium, totam erspiciatis unde omnis iste natus error .</p>
-                        <div class="event-meta-wrap">
-                            <div class="event-meta">
-                                <i class="fa fa-location-arrow"></i>
-                                <span>Banasree ,Rampura</span>
-                            </div>
-                            <div class="event-meta">
-                                <i class="fa fa-clock-o"></i>
-                                <span>10:00 am</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-event event-white-bg">
-                    <div class="event-img">
-                        <a href="event-details.html"><img src="assets/img/event/event-2.jpg" alt=""></a>
-                        <div class="event-date-wrap">
-                            <span class="event-date">1st</span>
-                            <span>Dec</span>
-                        </div>
-                    </div>
-                    <div class="event-content">
-                        <h3><a href="event-details.html">Social Sciences & Education.</a></h3>
-                        <p>Pvolupttem accusantium doloremque laudantium, totam erspiciatis unde omnis iste natus error .</p>
-                        <div class="event-meta-wrap">
-                            <div class="event-meta">
-                                <i class="fa fa-location-arrow"></i>
-                                <span>Shubastu ,Badda</span>
-                            </div>
-                            <div class="event-meta">
-                                <i class="fa fa-clock-o"></i>
-                                <span>10:30 am</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="single-brand-logo">
+                <a href="#"><img src="assets/img/brand-logo/2.png" alt=""></a>
+            </div>
+            <div class="single-brand-logo">
+                <a href="#"><img src="assets/img/brand-logo/3.png" alt=""></a>
+            </div>
+            <div class="single-brand-logo">
+                <a href="#"><img src="assets/img/brand-logo/4.png" alt=""></a>
+            </div>
+            <div class="single-brand-logo">
+                <a href="#"><img src="assets/img/brand-logo/5.png" alt=""></a>
+            </div>
+            <div class="single-brand-logo">
+                <a href="#"><img src="assets/img/brand-logo/6.png" alt=""></a>
+            </div>
+            <div class="single-brand-logo">
+                <a href="#"><img src="assets/img/brand-logo/2.png" alt=""></a>
             </div>
         </div>
     </div>
-    <div class="blog-area pt-130 pb-100">
-        <div class="container">
-            <div class="section-title mb-75">
-                <h2>Our <span>Newsfeed</span></h2>
-                <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br>veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip </p>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-blog mb-30">
-                        <div class="blog-img">
-                            <a href="blog-details.html"><img src="assets/img/blog/blog-1.jpg" alt=""></a>
-                        </div>
-                        <div class="blog-content-wrap">
-                            <span>Education</span>
-                            <div class="blog-content">
-                                <h4><a href="blog-details.html">Testing is a great thing.</a></h4>
-                                <p>doloremque laudan tium, totam ersps uns iste natus</p>
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-user"></i> Adrin Azra</a></li>
-                                        <li><a href="#"><i class="fa fa-comments-o"></i> 15</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="blog-date">
-                                <a href="#"><i class="fa fa-calendar-o"></i> Jun, 24th 2018</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-blog mb-30">
-                        <div class="blog-img">
-                            <a href="blog-details.html"><img src="assets/img/blog/blog-2.jpg" alt=""></a>
-                        </div>
-                        <div class="blog-content-wrap">
-                            <span>Education</span>
-                            <div class="blog-content">
-                                <h4><a href="blog-details.html">A variation of the ordinary.</a></h4>
-                                <p>doloremque laudan tium, totam ersps uns iste natus</p>
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-user"></i> Tayeb Jon</a></li>
-                                        <li><a href="#"><i class="fa fa-comments-o"></i> 12</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="blog-date">
-                                <a href="#"><i class="fa fa-calendar-o"></i> Feb, 18th 2017</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-blog mb-30">
-                        <div class="blog-img">
-                            <a href="blog-details.html"><img src="assets/img/blog/blog-3.jpg" alt=""></a>
-                        </div>
-                        <div class="blog-content-wrap">
-                            <span>Education</span>
-                            <div class="blog-content">
-                                <h4><a href="blog-details.html">In publishing and graphic.</a></h4>
-                                <p>doloremque laudan tium, totam ersps uns iste natus</p>
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-user"></i> Rifat Al</a></li>
-                                        <li><a href="#"><i class="fa fa-comments-o"></i> 20</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="blog-date">
-                                <a href="#"><i class="fa fa-calendar-o"></i> Oct, 14th 2018</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-blog mb-30">
-                        <div class="blog-img">
-                            <a href="blog-details.html"><img src="assets/img/blog/blog-4.jpg" alt=""></a>
-                        </div>
-                        <div class="blog-content-wrap">
-                            <span>Education</span>
-                            <div class="blog-content">
-                                <h4><a href="blog-details.html">Learn English in ease.</a></h4>
-                                <p>doloremque laudan tium, totam ersps uns iste natus</p>
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-user"></i>Md Tamim</a></li>
-                                        <li><a href="#"><i class="fa fa-comments-o"></i> 08</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="blog-date">
-                                <a href="#"><i class="fa fa-calendar-o"></i> Jun, 21th 2017</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
--->
+</div>
 <footer class="footer-area">
     <div class="footer-top bg-img default-overlay pt-130 pb-80" style="background-image:url(assets/img/bg/bg-4.jpg);">
         <div class="container">
@@ -1103,7 +803,10 @@
 <script src="assets/js/ajax-mail.js"></script>
 <!-- Main JS -->
 <script src="assets/js/main.js"></script>
-
+<!-- Reques JS-->
+<script src="assets/js/Api.js"></script>
+<!-- Moment Js-->
+<script src="assets/js/moment.js"></script>
 </body>
 
 

@@ -70,10 +70,10 @@
           box-sizing: border-box;
 }
 :root{
- --color-v: #0ac256;
- --color-v2: #087ffc;
- --color-v3: #13292e;
- --color-v4: #4e9e7d;
+ --color-v: #0ac256;      /*Color base of page*/
+ --color-v2: #087ffc;     /*Color of top etiquete from courses*/
+ --color-v3: #13292e;     /*Color dark of color base for footer*/
+ --color-v4: #6b6b6b;     /*Color hover of first card*/
 }
 html,
 body {
@@ -1794,7 +1794,6 @@ textarea:focus {
 
 .logo {
   margin-top: 10px;
-  margin-left: 15px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .logo {
@@ -1804,11 +1803,6 @@ textarea:focus {
 @media only screen and (max-width: 767px) {
   .logo {
     margin-top: 0px;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .logo{
-    margin-left: 10px;
   }
 }
 .menu-cart-wrap {
@@ -1903,7 +1897,7 @@ textarea:focus {
           transform: rotateX(0deg);
   visibility: visible;
 }
-> .main-menu nav ul li:first-child {
+.main-menu nav ul li:first-child {
   margin-left: 0px;
 }
 .main-menu nav ul li:hover a {
@@ -1915,11 +1909,11 @@ textarea:focus {
   text-transform: uppercase;
   display: inline-block;
   line-height: 50px;
+  letter-spacing: -0.05rem;
 }
 .main-menu nav ul li a i {
-  color: var(--color-v);
   font-size: 12px;
-  margin-left: 9px;
+  margin-left: 0px;
 }
 .main-menu nav ul li.mega-menu-position {
   position: static;
@@ -1985,6 +1979,7 @@ textarea:focus {
   text-align: left;
   text-transform: capitalize;
   padding-top: 0px;
+  font-weight: bold;
 }
 .main-menu nav ul li.mega-menu-position ul.mega-menu > li ul li a:hover {
   color: var(--color-v);
@@ -2029,8 +2024,7 @@ textarea:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 23px;
-  margin-top: 31px;
+  margin-top: 12px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .cart-search-wrap {
@@ -2183,7 +2177,7 @@ textarea:focus {
   margin-left: 21px;
 }
 .header-search:hover > button {
-  color: #e10606;
+  color: var(--color-v);
 }
 .header-search button {
   background: transparent;
@@ -2826,6 +2820,11 @@ textarea:focus {
     padding-left: 50px;
   }
 }
+@media only screen and (max-width: 992px){
+  .container-fluid .delete-card{
+    display: none;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-padding-1 .container-fluid {
     padding-right: 40px;
@@ -2862,7 +2861,7 @@ textarea:focus {
 }
 
 .choose-negative-mrg {
-  margin-top: -102px;
+  margin-top: -50px;
   z-index: 9;
   position: relative;
 }
@@ -2888,6 +2887,9 @@ textarea:focus {
   transition: all 0.3s ease 0s;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   border-radius: 5px;
+}
+.single-choose-us:hover{
+  background: var(--color-v4);
 }
 @media only screen and (min-width: 1366px) and (max-width: 1600px) {
   .single-choose-us {
@@ -3013,13 +3015,13 @@ textarea:focus {
     margin-left: 0px;
   }
 }
-.section-title:before {
+/*.section-title:before {
   content: url(../img/icon-img/section-shape.png);
   position: absolute;
   left: -32px;
   top: 2px;
   bottom: auto;
-}
+}*/
 @media only screen and (max-width: 767px) {
   .section-title:before {
     left: -5px;
@@ -3288,6 +3290,34 @@ textarea:focus {
     margin-left: 0;
   }
 }
+/*---------------- search ------------------*/
+
+.search .container{
+  margin-top: 100px;
+  padding-block: 50px;
+  border-radius: 5px;
+}
+
+.search .btn:hover{
+  color:#fff;
+}
+
+.search .input-text:focus{
+    
+  box-shadow: 0px 0px 0px;
+  border-color:#bdbdbd;
+  outline: 0px;
+}
+
+.search.form-control {
+  border: 2px solid #bdbdbd;
+}
+
+.search .bg-secondary{
+  background-color: #d3d3d3!important;
+}
+
+
 /*---------------- about us ----------------*/
 .single-about-chose-us {
   display: -webkit-box;
@@ -3444,9 +3474,11 @@ textarea:focus {
 .about-img.default-overlay:before {
   background-color: #000;
   opacity: 0.5;
+  border-radius: 15px;
 }
 .about-img.default-overlay img {
   width: 100%;
+  border-radius: 15px;
 }
 .about-img.default-overlay .video-btn {
   position: absolute;
@@ -3677,7 +3709,7 @@ textarea:focus {
   color: #333;
 }
 .single-course .course-content h4 a:hover {
-  color: #e10606;
+  color: var(--color-v);
 }
 .single-course .course-content p {
   line-height: 23px;
@@ -3698,7 +3730,7 @@ textarea:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0px 17px 23px;
+  padding: 0px 17px 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -3731,6 +3763,12 @@ textarea:focus {
   -webkit-box-shadow: 0px 6px 12px 0px rgba(225, 225, 225, 0.51);
           box-shadow: 0px 6px 12px 0px rgba(225, 225, 225, 0.51);
   z-index: 999;
+}
+.single-course .course-position-content .default-btn{
+  display: block;
+  font-size: 15px;
+  padding: 10px 40px 10px;
+  margin: 15px 17px;
 }
 .single-course:hover {
   z-index: 999;
@@ -3988,6 +4026,13 @@ textarea:focus {
   }
 }
 /*------------- course page -------------*/
+.course-area .course-content p{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  overflow: hidden;
+}
 .course-slider-active-3 .slick-list,
 .course-slider-active-4 .slick-list,
 .course-slider-active-5 .slick-list {
@@ -5032,7 +5077,7 @@ textarea:focus {
   position: absolute;
   top: -13px;
   left: 20px;
-  background-color: #e10606;
+  background-color: var(--color-v);
   color: #fff;
   display: inline-block;
   line-height: 1;
@@ -5071,6 +5116,11 @@ textarea:focus {
 .single-blog .blog-content-wrap .blog-content p {
   margin: 12px 0 5px;
   line-height: 23px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  line-clamp: 7;
+  overflow: hidden;
 }
 .single-blog .blog-content-wrap .blog-content .blog-meta ul {
   display: -webkit-box;
@@ -5090,14 +5140,14 @@ textarea:focus {
 }
 .single-blog .blog-content-wrap .blog-content .blog-meta ul li a i {
   font-size: 12px;
-  color: #e10606;
+  color: var(--color-v);
   margin-right: 5px;
 }
 .single-blog .blog-content-wrap .blog-content .blog-meta ul li a:hover {
-  color: #e10606;
+  color: var(--color-v);
 }
 .single-blog .blog-content-wrap .blog-date {
-  background-color: #e10606;
+  background-color: var(--color-v);
   padding: 6px 20px 8px;
 }
 .single-blog .blog-content-wrap .blog-date a {
@@ -5113,7 +5163,14 @@ textarea:focus {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
-
+.single-blog .blog-content-wrap .default-btn{
+  display: block;
+  margin:  0 20px 20px 20px ;
+  padding: 15px 40px 15px;
+  border-radius: 50px;
+  font-size: 12px;
+  border-radius: 0;
+}
 /*-------- home 2 -------*/
 .blog-active {
   position: relative;
