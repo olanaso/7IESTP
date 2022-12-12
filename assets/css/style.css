@@ -1912,7 +1912,7 @@ textarea:focus {
   letter-spacing: -0.05rem;
 }
 .main-menu nav ul li a i {
-  font-size: 12px;
+  font-size: 20px;
   margin-left: 0px;
 }
 .main-menu nav ul li.mega-menu-position {
@@ -3006,7 +3006,7 @@ textarea:focus {
           animation: 500ms ease-in-out 0s normal none 1 running tada;
 }
 
-.section-title {
+.section-title h2{
   position: relative;
   margin-left: 32px;
 }
@@ -3031,7 +3031,9 @@ textarea:focus {
   font-size: 48px;
   font-weight: bold;
   margin: 0 0 20px;
+  padding-left: 10px;
   line-height: 38px;
+  border-left: 5px solid var(--color-v);
 }
 @media only screen and (max-width: 767px) {
   .section-title h2 {
@@ -3699,6 +3701,7 @@ textarea:focus {
   font-size: 18px;
   font-weight: bold;
   margin: 0 0 10px;
+  text-align: center;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .single-course .course-content h4 {
@@ -4287,6 +4290,7 @@ textarea:focus {
 .testi-content.default-overlay:before {
   background-color: var(--color-v);
   opacity: 0.95;
+  border-radius: 0 15px 15px 0;
 }
 
 .testi-big-img img {
@@ -4296,6 +4300,7 @@ textarea:focus {
   top: 0;
   width: 50%;
   z-index: 2;
+  border-radius: 15px 0 0 15px;
 }
 @media only screen and (max-width: 767px) {
   .testi-big-img img {
@@ -5060,6 +5065,7 @@ textarea:focus {
 .single-blog .blog-img {
   position: relative;
   overflow: hidden;
+  border-radius: 15px;
 }
 .single-blog .blog-img img {
   width: 100%;
@@ -5168,8 +5174,8 @@ textarea:focus {
   margin:  0 20px 20px 20px ;
   padding: 15px 40px 15px;
   border-radius: 50px;
-  font-size: 12px;
-  border-radius: 0;
+  font-size: 15px;
+  text-transform: none;
 }
 /*-------- home 2 -------*/
 .blog-active {
@@ -5609,6 +5615,7 @@ textarea:focus {
           transform: scale(1);
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
+  border-radius: 15px;
 }
 .single-banner .banner-content {
   position: absolute;

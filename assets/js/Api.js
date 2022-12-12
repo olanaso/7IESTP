@@ -3,6 +3,7 @@ const URL_GLOBAL = 'https://ww2.institutoaucara.edu.pe';
 const containerNews = document.getElementById('container-news');
 const searchText = document.getElementById('txt-buscar');
 const buttonSearch = document.getElementById('send-search');
+const slider = document.getElementById('slider-section');
 
 function search(text = '') {
     if (text.trim() !== '') {
@@ -11,12 +12,48 @@ function search(text = '') {
 }
 document.addEventListener('DOMContentLoaded', async () => {
     pintarNews();
+    pintarSlider();
+
     console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
     buttonSearch.addEventListener('click', ()=>{
         search(searchText.value);
     })
 })
+
+/*
+//first slider
+function pintarSlider() {
+    getCategories(24, 3).then(data => {
+        data.map(category => {
+            const div = document.createElement('div');
+            getMedia(category).then(data =>{
+                div.classList.add('single-slider', 'slider-height-3', 'bg-img', 'pt-170');
+                div.style.backgroundImage = `url(${data.source_url})`;
+            });
+            slider.appendChild(div)
+            //console.log(div.attributes)
+        })
+    });
+
+}
+*/
+
+//second slider
+function pintarSlider() {
+    getCategories(24, 2).then(data => {
+        data.map(category => {
+            const div = document.createElement('div');
+            getMedia(category).then(data =>{
+                div.classList.add('carousel-item','active');
+                div.innerHTML = `
+                <img src="${data["media_details"]["sizes"]["full"]["source_url"]}" class="d-block w-100" alt="">
+                `
+            });
+            slider.appendChild(div);
+        })
+    });
+}
 
 
 
@@ -25,12 +62,11 @@ function pintarNews() {
         data.map(category => {
             const div = document.createElement('div');
             getMedia(category).then(data => {
-                console.log(category)
                 div.classList.add('col-lg-3', 'col-md-6');
                 div.innerHTML = `
                 <div class="single-blog mb-30">
                     <div class="blog-img">
-                        <a href="${category.link}"><img src="${data.media_details ? data.media_details.sizes.medium.source_url : '/assets/images/sin_imagen.png'}" alt="${category.name}"></a>
+                        <a href="${category.link}"><img src="${data.media_details ? data.media_details.sizes.medium.source_url : '/assets/images/sin_imagen.png'}" alt="${category.name}" width="263" height="194"></a>
                     </div>
                     <div class="blog-content-wrap">
                         <span>${category.date}</span>
@@ -38,7 +74,7 @@ function pintarNews() {
                             <h4>
                                 <a href="${category.link}">${category.title.rendered}</a>
                             </h4>
-                            ${category.excerpt.rendered}
+                            
                         </div>
                         <a class="default-btn" href="${category.link}">Leer más...</a>
                     </div>
@@ -49,6 +85,7 @@ function pintarNews() {
         })
     });
 }
+
 
 //petitions
 function getCategories(category, size) {
