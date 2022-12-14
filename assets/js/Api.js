@@ -5,41 +5,23 @@ const searchText = document.getElementById('txt-buscar');
 const buttonSearch = document.getElementById('send-search');
 const slider = document.getElementById('slider-section');
 
-function search(text = '') {
-    if (text.trim() !== '') {
-        window.location.href = `https://ww2.institutoaucara.edu.pe/index.php?s=${text}`;
-    }
-}
+
 document.addEventListener('DOMContentLoaded', async () => {
     pintarNews();
     pintarSlider();
 
-    console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
-
     buttonSearch.addEventListener('click', ()=>{
         search(searchText.value);
-    })
-})
-
-/*
-//first slider
-function pintarSlider() {
-    getCategories(24, 3).then(data => {
-        data.map(category => {
-            const div = document.createElement('div');
-            getMedia(category).then(data =>{
-                div.classList.add('single-slider', 'slider-height-3', 'bg-img', 'pt-170');
-                div.style.backgroundImage = `url(${data.source_url})`;
-            });
-            slider.appendChild(div)
-            //console.log(div.attributes)
-        })
     });
+});
 
+function search(text = '') {
+    if (text.trim() !== '') {
+        window.open(`https://ww2.institutoaucara.edu.pe/index.php?s=${text}`);
+        //window.location.href = `https://ww2.institutoaucara.edu.pe/index.php?s=${text}`;
+    }
 }
-*/
 
-//second slider
 function pintarSlider() {
     getCategories(24, 2).then(data => {
         data.map(category => {

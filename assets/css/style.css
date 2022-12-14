@@ -74,6 +74,9 @@
  --color-v2: #087ffc;     /*Color of top etiquete from courses*/
  --color-v3: #13292e;     /*Color dark of color base for footer*/
  --color-v4: #6b6b6b;     /*Color hover of first card*/
+ --color-v5: #13292e;     /*Color hover of curses section*/
+ --color-v6: linear-gradient(180deg, #505467 0, #1f3259 50%, #00154b 100%);   /*Color hover of advantages section*/
+ --color-v7: linear-gradient(180deg, #65736e 0, #586d68 12.5%, #496763 25%, #37605d 37.5%, #1f5959 50%, #005156 62.5%, #004a54 75%, #004453 87.5%, #003d52 100%);   /*Color hover of our-teachers section*/
 }
 html,
 body {
@@ -1609,7 +1612,7 @@ textarea:focus {
   font-weight: bold;
   padding: 21px 40px 21px;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   line-height: 1;
@@ -1812,17 +1815,11 @@ textarea:focus {
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-start;
+          justify-content: flex-end;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .menu-cart-wrap {
-    margin-right: 38px;
-  }
 }
 @media only screen and (max-width: 767px) {
-  .menu-cart-wrap {
-    margin-right: 38px;
-  }
 }
 
 .main-menu nav ul li {
@@ -2169,7 +2166,7 @@ textarea:focus {
   display: block;
 }
 .cart-wrap:hover > button {
-  color: #e10606;
+  color: var(--color-v);
 }
 
 .header-search {
@@ -2216,7 +2213,7 @@ textarea:focus {
   padding: 5px 14px 5px 14px;
 }
 .header-search .search-content form button:hover {
-  color: #e10606;
+  color: var(--color-v);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2821,7 +2818,7 @@ textarea:focus {
   }
 }
 @media only screen and (max-width: 992px){
-  .container-fluid .delete-card{
+  .choose-us .delete-card{
     display: none;
   }
 }
@@ -3473,11 +3470,13 @@ textarea:focus {
     margin-top: 30px;
   }
 }
+/*
 .about-img.default-overlay:before {
   background-color: #000;
   opacity: 0.5;
   border-radius: 15px;
 }
+*/
 .about-img.default-overlay img {
   width: 100%;
   border-radius: 15px;
@@ -4055,6 +4054,56 @@ textarea:focus {
   margin-bottom: 90px;
 }
 
+.courses::before{
+  background-color: var(--color-v5);
+  opacity: 0.9;
+}
+.courses .card-body li a:hover{
+  border-left: 5px solid white;
+  text-decoration: underline;
+  padding-left: 15px;
+  color: white;
+}
+.courses .card-title{
+  font-weight: bold;
+}
+.courses .card-footer{
+  background-image: -moz-linear-gradient(90deg,rgb(227,227,227) 0%,rgb(227,227,227) 50%,rgb(255,255,255) 50%,rgb(255,255,255) 100%);
+}
+.courses .card-footer .area-view{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+/*--------- Advantages -------------------*/
+.advantages::before{
+  background-image: var(--color-v6);
+  opacity: 0.8;
+}
+.advantages-element{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.advantages-img{
+  margin-right: 20px;
+}
+.advantages-content p{
+  color: white;
+  font-size: 1rem;
+}
+.advantages-content span{
+  font-weight: bold;
+}
+/*--------- Our Teachers -----------------*/
+.our-teachers:before{
+  background-image: var(--color-v7);
+  opacity: 0.85;
+}
+.our-teachers-btn{
+  text-align: center;
+}
 /*--------- 7. Achievement style ---------*/
 .single-count {
   display: -webkit-box;
@@ -5078,6 +5127,7 @@ textarea:focus {
   -webkit-box-shadow: 0px 0px 12px 0.8px rgba(225, 225, 225, 0.3);
           box-shadow: 0px 0px 12px 0.8px rgba(225, 225, 225, 0.3);
   position: relative;
+  padding-bottom: 5px;
 }
 .single-blog .blog-content-wrap span {
   position: absolute;
@@ -5381,6 +5431,7 @@ textarea:focus {
   padding: 2px 20px;
   font-size: 14px;
   color: #333;
+  border-radius: 50px;
 }
 .footer-widget .subscribe-style .subscribe-form form .mc-news {
   display: none;
@@ -5388,7 +5439,7 @@ textarea:focus {
 .footer-widget .subscribe-style .subscribe-form form .clear input {
   width: auto;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--color-v);
   height: auto;
   padding: 9px 40px;
