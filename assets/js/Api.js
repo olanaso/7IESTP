@@ -27,9 +27,16 @@ function pintarSlider() {
         data.map(category => {
             const div = document.createElement('div');
             getMedia(category).then(data =>{
+                
                 div.classList.add('carousel-item','active');
                 div.innerHTML = `
-                <img src="${data["media_details"]["sizes"]["full"]["source_url"]}" class="d-block w-100" alt="">
+                <img src="${data.source_url}" class="d-block w-100" alt="">
+                <div class="container">
+                    <div class="hero-content">
+                        <h5 class="fade-in-right-1">Municipalidad de San Juan de Lurigancho</h5>
+                        <h2 class="fade-in-right-2">Parque Santa Rosa</h2>		
+                    </div>
+                </div>
                 `
             });
             slider.appendChild(div);

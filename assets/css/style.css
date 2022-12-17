@@ -11,7 +11,7 @@
 
     1. Template default CSS
     2. Header style
-	3. Slider style
+	  3. Slider style
     4. choose us area
     5. About us
     6. Course area
@@ -71,7 +71,7 @@
 }
 :root{
  --color-v: #0ac256;      /*Color base of page*/
- --color-v2: #087ffc;     /*Color of top etiquete from courses*/
+ --color-v2: #087ffc;     /*Color hover from card of courses*/
  --color-v3: #13292e;     /*Color dark of color base for footer*/
  --color-v4: #6b6b6b;     /*Color hover of first card*/
  --color-v5: #13292e;     /*Color hover of curses section*/
@@ -1536,10 +1536,6 @@ textarea:focus {
   }
 }
 
-.mean-container a.meanmenu-reveal {
-  top: -50px;
-}
-
 #mobile-menu-active {
   display: none;
 }
@@ -1812,12 +1808,14 @@ textarea:focus {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+}
+@media only screen and (max-width: 991px) {
+  .menu-cart-wrap {
+    display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+  }
 }
 @media only screen and (max-width: 767px) {
 }
@@ -1906,7 +1904,12 @@ textarea:focus {
   text-transform: uppercase;
   display: inline-block;
   line-height: 50px;
-  letter-spacing: -0.05rem;
+  /*letter-spacing: -0.05rem;*/
+}
+@media only screen and (max-width: 1250px) {
+  .main-menu nav ul li a{
+    letter-spacing: -0.05rem;
+  }
 }
 .main-menu nav ul li a i {
   font-size: 20px;
@@ -1996,7 +1999,7 @@ textarea:focus {
   z-index: 999;
 }
 .main-menu nav ul li.mega-menu-position ul.mega-menu > li ul li:hover a::before {
-  opacity: 1;
+  opacity: 0;
 }
 .main-menu nav ul li.mega-menu-position ul.mega-menu > li ul li:hover a {
   padding-left: 12px;
@@ -2244,6 +2247,63 @@ textarea:focus {
 }
 
 /*--------- 3. Slider style ---------*/
+.slider-home-page .carousel-inner .container{
+  position: relative;
+}
+.slider-home-page .carousel-inner .hero-content{ /*need responsive section*/
+  position: absolute;
+  color: white;
+  top: -300px;
+}
+.slider-home-page .carousel-inner .hero-content h2{
+  margin-top: 10px;
+  color: white;
+  background-color: var(--color-v2);
+  padding: 5px;
+}
+.slider-home-page .carousel-inner .hero-content h5{
+  color: white;
+  padding: 5px;
+  background-color: rgb(255, 145, 0);
+}
+.fade-in-right-1{
+  animation: fade-in-right 1s;
+}
+.fade-in-right-2{
+  animation: fade-in-right 2s;
+}
+@keyframes fade-in-right{
+  from{
+    opacity: 0;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+  }
+  to{
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .slider-home-page .carousel-inner .hero-content {
+    top: -200px;
+  }
+}
+@media only screen and (max-width: 765px) {
+  .slider-home-page .carousel-inner .hero-content {
+    top: -150px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .slider-home-page .carousel-inner .hero-content {
+    top: -100px;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .slider-home-page .carousel-inner .container {
+    display: none !important;
+  }
+}
 .slider-height-1 {
   height: 844px;
 }
@@ -3371,6 +3431,16 @@ textarea:focus {
 }
 
 /*--------- 4. choose us area ---------*/
+.choose-us .cards-wrapper .card{
+  padding: 15px;
+}
+.choose-us .choose-img{
+  padding-bottom: 15px;
+}
+.choose-us .choose-img,
+.choose-us .choose-content{
+  text-align: center;
+}
 .text-green.about-choose-content h3 {
   color: #e10606;
 }
@@ -4068,13 +4138,27 @@ textarea:focus {
   font-weight: bold;
 }
 .courses .card-footer{
-  background-image: -moz-linear-gradient(90deg,rgb(227,227,227) 0%,rgb(227,227,227) 50%,rgb(255,255,255) 50%,rgb(255,255,255) 100%);
+  background-image: -moz-linear-gradient(90deg,rgb(227,227,227) 0%,rgb(227,227,227) 50%,rgb(255,255,255) 50%,rgb(255,255,255) 100%) !important;
+}
+.courses .card:hover{
+  background-color: var(--color-v) !important;
+  transition: .45s;
+}
+.courses .card-body a:hover{
+  color: white;
+  border-left: 6px solid white;
+  padding-left: 15px;
 }
 .courses .card-footer .area-view{
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
+/*
+.courses .card-footer .area-view:hover{
+  color: var(--color-v2);
+  transition: .45s;
+}*/
 /*--------- Advantages -------------------*/
 .advantages::before{
   background-image: var(--color-v6);
@@ -5639,6 +5723,29 @@ textarea:focus {
 }
 
 /*--------- 16. Brand logo ---------*/
+.brand-logo-area .carousel-item .cards-wrapper{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+.brand-logo-area .carousel-item .single-brand-logo{
+  text-align: center;
+  padding: 15px 0;
+}
+.brand-logo-area .carousel-item .card{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.brand-logo-area .carousel-item .single-brand-logo img{
+  height: 90px;
+}
+.brand-logo-area .carousel-control-next-icon,
+.brand-logo-area .carousel-control-prev-icon {
+  background-color: rgb(209, 209, 209);
+  border-radius: 5px;
+}
 .brand-logo-active.owl-carousel .owl-item .single-brand-logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
