@@ -4,12 +4,20 @@ const containerNews = document.getElementById('container-news');
 const searchText = document.getElementById('txt-buscar');
 const buttonSearch = document.getElementById('send-search');
 const slider = document.getElementById('slider-section');
+const modal = document.getElementById('modal-section');
 
 
 document.addEventListener('DOMContentLoaded', async () => {
+    pintarModal();
     pintarNews();
     pintarSlider();
 
+    //view modal
+    
+    $(document).ready(function(){
+         $("#mostrarmodal").modal("show");
+    });
+    //search   
     buttonSearch.addEventListener('click', ()=>{
         search(searchText.value);
     });
@@ -22,19 +30,32 @@ function search(text = '') {
     }
 }
 
-function pintarSlider() {
+function pintarModal(){
     getCategories(24, 2).then(data => {
         data.map(category => {
             const div = document.createElement('div');
             getMedia(category).then(data =>{
-                
+                div.classList.add('carousel-item','active');
+                div.innerHTML = `
+                <img src="${data.source_url}" class="d-block w-100" alt="">
+                `
+            });
+            modal.appendChild(div);
+        })
+    });
+}
+
+function pintarSlider() {
+    getCategories(24, 3).then(data => {
+        data.map(category => {
+            const div = document.createElement('div');
+            getMedia(category).then(data =>{
                 div.classList.add('carousel-item','active');
                 div.innerHTML = `
                 <img src="${data.source_url}" class="d-block w-100" alt="">
                 <div class="container">
                     <div class="hero-content">
-                        <h5 class="fade-in-right-1">Municipalidad de San Juan de Lurigancho</h5>
-                        <h2 class="fade-in-right-2">Parque Santa Rosa</h2>		
+                        <h2 class="fade-in-right-2">${category.title.rendered}</h2>		
                     </div>
                 </div>
                 `
@@ -58,7 +79,7 @@ function pintarNews() {
                         <a href="${category.link}"><img src="${data.media_details ? data.media_details.sizes.medium.source_url : '/assets/images/sin_imagen.png'}" alt="${category.name}" width="263" height="194"></a>
                     </div>
                     <div class="blog-content-wrap">
-                        <span>${category.date}</span>
+                        <span>${dateToString(data.date)}</span>
                         <div class="blog-content">
                             <h4>
                                 <a href="${category.link}">${category.title.rendered}</a>
@@ -75,6 +96,12 @@ function pintarNews() {
     });
 }
 
+
+
+function dateToString(date){
+    const event = new Date(date);
+    return event.toLocaleDateString('es-PE',{hour: '2-digit', minute:'2-digit'});
+}
 
 //petitions
 function getCategories(category, size) {

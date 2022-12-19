@@ -70,8 +70,8 @@
           box-sizing: border-box;
 }
 :root{
- --color-v: #0ac256;      /*Color base of page*/
- --color-v2: #087ffc;     /*Color hover from card of courses*/
+ --color-v: #DD4D2A;      /*Color base of page*/
+ --color-v2: rgb(0, 0, 0);     /*Color hover from card of courses*/
  --color-v3: #13292e;     /*Color dark of color base for footer*/
  --color-v4: #6b6b6b;     /*Color hover of first card*/
  --color-v5: #13292e;     /*Color hover of curses section*/
@@ -1549,7 +1549,9 @@ textarea:focus {
 .mobile-menu.mean-container .mean-nav ul {
   margin: 14px 0 0;
 }
-
+.mean-container .mean-nav ul li a:hover{
+  color: var(--color-v);
+}
 /*-- 
     Scroll Up 
 -----------------------------------------*/
@@ -1652,7 +1654,7 @@ textarea:focus {
   width: 100%;
   height: 44px;
   content: "";
-  background-color: #e10606;
+  background-color: black;
   opacity: 0.8;
 }
 @media only screen and (max-width: 767px) {
@@ -1793,6 +1795,19 @@ textarea:focus {
 
 .logo {
   margin-top: 10px;
+}
+.header-others-logo{
+  display: flex;
+}
+@media only screen and (max-width: 440px) {
+  .header-others-logo{
+    display: none;
+  }
+}
+.container-header-logo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .logo {
@@ -2247,6 +2262,17 @@ textarea:focus {
 }
 
 /*--------- 3. Slider style ---------*/
+.slider-home-page .carousel-inner::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,212,255,0) 30%);
+}
 .slider-home-page .carousel-inner .container{
   position: relative;
 }
@@ -2256,15 +2282,19 @@ textarea:focus {
   top: -300px;
 }
 .slider-home-page .carousel-inner .hero-content h2{
-  margin-top: 10px;
+  margin-top: 20px;
   color: white;
-  background-color: var(--color-v2);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 5px;
 }
 .slider-home-page .carousel-inner .hero-content h5{
   color: white;
   padding: 5px;
   background-color: rgb(255, 145, 0);
+}
+.only-degrad{
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 44%, rgba(0,212,255,0) 100%);
 }
 .fade-in-right-1{
   animation: fade-in-right 1s;
@@ -2918,7 +2948,7 @@ textarea:focus {
 }
 
 .choose-negative-mrg {
-  margin-top: -50px;
+  margin-top: -200px;
   z-index: 9;
   position: relative;
 }
@@ -3431,17 +3461,28 @@ textarea:focus {
 }
 
 /*--------- 4. choose us area ---------*/
-.choose-us .cards-wrapper .card{
+.choose-us{
+  max-inline-size: 1200px;
+  padding: 10px;
+  margin-inline: auto;
+}
+.choose-us .card{
   padding: 15px;
+  height: 186px;
 }
-.choose-us .choose-img{
-  padding-bottom: 15px;
-}
-.choose-us .choose-img,
-.choose-us .choose-content{
+.choose-us .card a{
+  padding: 15px;
   text-align: center;
 }
+.choose-us .card h3{
+  padding-top: 10px;
+}
+.choose-us .choose-img{
+  display: flex;
+  justify-content: center;
+}
 .text-green.about-choose-content h3 {
+  display: block;
   color: #e10606;
 }
 
@@ -4128,16 +4169,14 @@ textarea:focus {
   background-color: var(--color-v5);
   opacity: 0.9;
 }
-.courses .card-body li a:hover{
-  border-left: 5px solid white;
-  text-decoration: underline;
-  padding-left: 15px;
-  color: white;
-}
 .courses .card-title{
   font-weight: bold;
 }
+.courses .card{
+  background-color: #435750;
+}
 .courses .card-footer{
+  position: relative;
   background-image: -moz-linear-gradient(90deg,rgb(227,227,227) 0%,rgb(227,227,227) 50%,rgb(255,255,255) 50%,rgb(255,255,255) 100%) !important;
 }
 .courses .card:hover{
@@ -5723,6 +5762,15 @@ textarea:focus {
 }
 
 /*--------- 16. Brand logo ---------*/
+.brand-logo-area .card{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 10px 0;
+}
+.brand-logo-area .single-brand-logo img{
+  width: 100%;
+  height: 60px;
+  padding: 5px;
+}
 .brand-logo-area .carousel-item .cards-wrapper{
   display: flex;
   gap: 20px;

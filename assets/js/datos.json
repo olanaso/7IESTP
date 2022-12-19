@@ -1,0 +1,185 @@
+[
+    {
+        "id": 1,
+        "name": "home",
+        "logo_url":"https://ww2.institutoaucara.edu.pe/wp-content/uploads/2022/12/Logo-aucara-1.png",
+        "nosotros":{
+            "reseña_url": "http://",
+            "mision_vision_url": "http://",
+            "reglamento_url": "http://",
+            "valores_url": "http://",
+            "directorio_url": "http://",
+            "organigrama_url": "http://"
+        },
+        "programas":[
+            {
+                "id": 1,
+                "nombre": "producción",
+                "url": "http"
+            },
+            {
+                "id": 2,
+                "nombre": "producción",
+                "url": "http"
+            },
+            {
+                "id": 3,
+                "nombre": "producción",
+                "url": "http"
+            }
+        ],
+        "servicios":{
+            "admision_url": "http://",
+            "matricula_url": "http://",
+            "aula_virtual_url": "http://",
+            "biblioteca_virtual_url": "http://",
+            "titulación_url": "http://",
+            "centro_aplicacion_url": "http://",
+            "proyecto_productivo_url": "http://",
+            "proyecto_especializacion_url": "http://",
+            "proyecto_formacion_url": "http://",
+            "nivelacion_academica_url": "http://",
+            "continua_url": "http://"
+        },
+        "transparencia":{
+            "resolucion_url": "http://",
+            "convenios_url": "http://",
+            "comunicados_url": "http://",
+            "documentos_gestion_url": "http://",
+            "publicaciones_url": "http://",
+            "calendario_url": "http://"
+        },
+        "informacion":{
+            "tramites_url": "http://",
+            "convocatoria_docentes_url": "http://",
+            "bolsa_trabajo_url": "http://",
+            "servicios_url": "http://"
+        },
+        "galeria-url":"http://",
+        "noticias":"http://"
+    },
+    {
+        "id": 2,
+        "name":"sobre nosotros",
+        "title": "instituto ...",
+        "content": "dawdwadawdwadawwdawdawd",
+        "imagen_url":"http://",
+        "url": "http://"
+    },
+    {
+        "id": 3,
+        "nombre": "programas de estudio",
+        "descripcion":"dawddadsadsads da",
+        "programas":[
+            {
+                "id": 1,
+                "nombre":"enfermeria",
+                "url":"http://"
+            },
+            {
+                "id": 2,
+                "nombre":"enfermeria",
+                "url":"http://"
+            },
+            {
+                "id": 3,
+                "nombre":"enfermeria",
+                "url":"http://"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "nombre": "servicios académicos internos",
+        "centro_aplicacion_url":"http://",
+        "proyecto_productivo_url":"http://"
+    },
+    {
+        "id": 5,
+        "nombre": "ventajas",
+        "ventajas":[
+            {
+                "id":1,
+                "imagen_url":"http://",
+                "contenido": "dawddd sddscds csdsdcscd"
+            },
+            {
+                "id":2,
+                "imagen_url":"http://",
+                "contenido": "dawddd sddscds csdsdcscd"
+            },
+            {
+                "id":3,
+                "imagen_url":"http://",
+                "contenido": "dawddd sddscds csdsdcscd"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "nombre": "estadísticas y testimonios"
+
+    },
+    {
+        "id": 7,
+        "nombre": "nuestros docentes",
+        "url":"http://"
+    },
+    {
+        "id": 8,
+        "nombre":"enlaces de interés",
+        "enlaces":[
+            {
+                "id":1,
+                "nombre": "Consejo Nacional de Educación",
+                "imagen_url":"https://iestphuanta.edu.pe/wp-content/uploads/2022/08/CNE-Logo.png",
+                "url": ""
+            },
+            {
+                "id":2,
+                "nombre": "Dirección Regional de Ayacucho",
+                "imagen_url":"https://iestphuanta.edu.pe/wp-content/uploads/2022/08/drea.png",
+                "url": ""
+            },
+            {
+                "id":3,
+                "nombre": "Perú Educa",
+                "imagen_url":"https://iestphuanta.edu.pe/wp-content/uploads/2022/08/logo-1.png",
+                "url": ""
+            },
+            {
+                "id":4,
+                "nombre": "Minedu",
+                "imagen_url":"https://iestphuanta.edu.pe/wp-content/uploads/2022/08/minedu.png",
+                "url": ""
+            },
+            {
+                "id":5,
+                "nombre": "Pronabec",
+                "imagen_url":"https://iestphuanta.edu.pe/wp-content/uploads/2022/08/Beca_Permanencia_Pronabec_requisitos__inscripcion_y_resultados-1.png",
+                "url": ""
+            },
+            {
+                "id":6,
+                "nombre": "Curriculo Nacional",
+                "imagen_url":"https://iestphuanta.edu.pe/wp-content/uploads/2022/08/cn-removebg-preview.png",
+                "url": ""
+            },
+            {
+                "id":6,
+                "nombre": "Gobierno Regional de Ayacucho",
+                "imagen_url":"c",
+                "url": ""
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "nombre":"footer",
+        "descripcion": "dawdwadcsdcsdcscscds",
+        "direccion": "dwdawdaw",
+        "horario": "dawdwadawdwadawd",
+        "llamanos": "dawdwadawdawdawd",
+        "escribenos": "dwadawdwadadawdaw"
+    }
+]
